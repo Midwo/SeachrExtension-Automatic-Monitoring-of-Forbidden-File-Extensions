@@ -19,11 +19,12 @@ namespace SearchExtension
         public Form1()
         {
             InitializeComponent();
+            RefleshDataGrid();
 
             timer1.Start();
 
             Microsoft.Win32.RegistryKey key;
-            key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - Monitoring plikow");
+            key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - SeachrExtension");
             if (key.GetValue("Path") == null)
             {
                 tBPath.Text = "";
@@ -37,29 +38,26 @@ namespace SearchExtension
                 foreach (string item2 in dirs)
                 {
 
-                    FileInfo f = new FileInfo(item2);
-
+                    FileInfo fileInfo = new FileInfo(item2);
 
                     DirectoryInfo dir = new DirectoryInfo(item2);
 
                     var x = dir.EnumerateFiles("*.*", SearchOption.AllDirectories).Sum(file => file.Length);
 
 
-                    listBox1.Items.Add(f.Name + " waga: " + x / 1024 / 1024 + "MB");
+                    listBox1.Items.Add(fileInfo.Name + " waga: " + x / 1024 / 1024 + "MB");
 
                     RefleshDataGrid();
 
-
-
                     if (key.GetValue("Hour") != null && key.GetValue("Minute") != null && key.GetValue("Second") != null)
                     {
-                        cBGodzina.SelectedItem = key.GetValue("Hour");
-                        cBMinuta.SelectedItem = key.GetValue("Minute");
-                        cBSekunda.SelectedItem = key.GetValue("Second");
+                        cBHour.SelectedItem = key.GetValue("Hour");
+                        cBMinute.SelectedItem = key.GetValue("Minute");
+                        cBSecond.SelectedItem = key.GetValue("Second");
                     }
                     if (key.GetValue("NumericMinute") != null)
                     {
-                        nUDCoIleMinut.Value = Convert.ToDecimal(key.GetValue("NumericMinute"));
+                        nUDCoIlePeriod.Value = Convert.ToDecimal(key.GetValue("NumericMinute"));
                     }
                 }
                 
@@ -86,20 +84,19 @@ namespace SearchExtension
 
         }
 
-        private void ListaEmailOdbiorcówToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ListOfMsgRecipientsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BookEmails m = new BookEmails();
             m.Show();
         }
 
-        private void KonfiguracjaKontaEmailToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ConfigurationAccountEmailToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EmailConfigurations m = new EmailConfigurations();
             m.Show();
-
         }
-
-        private void InformacjaOAutorzeToolStripMenuItem_Click(object sender, EventArgs e)
+        
+        private void AuthorInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Dane kontaktowe i informacje o autorze znajdziesz na stronie www.mdwojak.pl. Czy odwiedzić teraz tę stronę?", "Informacja - autor", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
             {
@@ -107,14 +104,13 @@ namespace SearchExtension
             }
         }
 
-        private void GrafikaUżytaWProjekcieToolStripMenuItem_Click(object sender, EventArgs e)
+        private void GraphicInProjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Elementy graficzne należą do www.icons8.com i oparte są na licencji: Creative Commons Attribution-NoDerivs 3.0 Unported. Czy chcesz wejść na stronę icons8.com?", "Informacja - grafika", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
             {
                 System.Diagnostics.Process.Start("https://icons8.com");
             }
         }
-
         private void BLoadPath_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
@@ -131,7 +127,7 @@ namespace SearchExtension
                 foreach (string item2 in dirs)
                 {
 
-                    FileInfo f = new FileInfo(item2);
+                    FileInfo fileInfo = new FileInfo(item2);
 
 
                     DirectoryInfo dir = new DirectoryInfo(item2);
@@ -139,7 +135,7 @@ namespace SearchExtension
                     var x = dir.EnumerateFiles("*.*", SearchOption.AllDirectories).Sum(file => file.Length);
 
 
-                    listBox1.Items.Add(f.Name + " waga: " + x / 1024 / 1024 + "MB");
+                    listBox1.Items.Add(fileInfo.Name + " waga: " + x / 1024 / 1024 + "MB");
                     //using (var db = new UsersContext())
                     //{
 
@@ -156,7 +152,7 @@ namespace SearchExtension
                     //    }
                     //    else
                     //    {
-                    //        // rekordy już są - nie trzeba nic robić
+                    //        // rekords exist
                     //    }
 
 
@@ -166,16 +162,16 @@ namespace SearchExtension
                 //   MessageBox.Show("" + fbd.SelectedPath + "");
 
                 Microsoft.Win32.RegistryKey key;
-                key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - Monitoring plikow");
+                key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - SeachrExtension");
                 key.SetValue("Path", "" + fbd.SelectedPath + "");
                 key.Close();
 
                 // wypisanie plików
                 //foreach (string item in files)
                 //{
-                //    FileInfo f = new FileInfo(item);
+                //    FileInfo fileInfo = new FileInfo(item);
 
-                //    listBox1.Items.Add(f.Name + "i waży plik:" +f.Length/1024/1024 + " MB");
+                //    listBox1.Items.Add(fileInfo.Name + "i waży plik:" +fileInfo.Length/1024/1024 + " MB");
 
                 //}
             }
@@ -185,35 +181,34 @@ namespace SearchExtension
             }
         }
 
-        private void CbWybranaOpcjaSprawdzania_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbChoicePeriod_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbWybranaOpcjaSprawdzania.SelectedIndex == 0)
+            if (cbChoicePeriod.SelectedIndex == 0)
             {
-                cBGodzina.Enabled = true;
-                cBMinuta.Enabled = true;
-                cBSekunda.Enabled = true;
+                cBHour.Enabled = true;
+                cBMinute.Enabled = true;
+                cBSecond.Enabled = true;
                 label6.Enabled = true;
                 label7.Enabled = true;
                 label8.Enabled = true;
-                nUDCoIleMinut.Enabled = false;
-                lWykonujCo.Enabled = false;
-                lMinuty.Enabled = false;
+                nUDCoIlePeriod.Enabled = false;
+                lPeriod.Enabled = false;
+                lMinutes.Enabled = false;
 
             }
-            else if (cbWybranaOpcjaSprawdzania.SelectedIndex == 1)
+            else if (cbChoicePeriod.SelectedIndex == 1)
             {
-                cBGodzina.Enabled = false;
-                cBMinuta.Enabled = false;
-                cBSekunda.Enabled = false;
-                nUDCoIleMinut.Enabled = true;
-                lWykonujCo.Enabled = true;
-                lMinuty.Enabled = true;
+                cBHour.Enabled = false;
+                cBMinute.Enabled = false;
+                cBSecond.Enabled = false;
+                nUDCoIlePeriod.Enabled = true;
+                lPeriod.Enabled = true;
+                lMinutes.Enabled = true;
                 label6.Enabled = false;
                 label7.Enabled = false;
                 label8.Enabled = false;
             }
         }
-
         private void BAddExt_Click(object sender, EventArgs e)
         {
             using (var db = new ExtensionContext())
@@ -294,7 +289,7 @@ namespace SearchExtension
                 BookEmails = query.Count();
             }
             Microsoft.Win32.RegistryKey key;
-            key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - Monitoring plikow");
+            key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - SeachrExtension");
             object o = key.GetValue("Password");
             key.Close();
 
@@ -310,20 +305,20 @@ namespace SearchExtension
 
             }
 
-            else if(BookEmails < 1)
+            else if (BookEmails < 1)
             {
                 MessageBox.Show("Musisz wprowadzić listę osób odbierających wiadomość - użyj menu", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
-            else if (cbWybranaOpcjaSprawdzania.SelectedIndex == -1)
+            else if (cbChoicePeriod.SelectedIndex == -1)
             {
                 MessageBox.Show("Musisz wybrać combobox 'Opcje - czas sprawdzania'", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (cbWybranaOpcjaSprawdzania.SelectedIndex == 0)
-            { 
+            else if (cbChoicePeriod.SelectedIndex == 0)
+            {
 
-                if (cBGodzina.SelectedItem == null || cBMinuta.SelectedItem == null
-                   || cBSekunda.SelectedItem == null)
+                if (cBHour.SelectedItem == null || cBMinute.SelectedItem == null
+                   || cBSecond.SelectedItem == null)
 
                 {
                     MessageBox.Show("Uzupełnij czas sprawdzenia - 'Opcje - czas sprawdzania'", "Uwaga", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -331,36 +326,36 @@ namespace SearchExtension
                 else
                 {
                     TimerActiveButton = true;
-                    DateMonit = DateTime.Now.AddSeconds(Convert.ToDouble(nUDCoIleMinut.Value));
+                    DateMonit = DateTime.Now.AddSeconds(Convert.ToDouble(nUDCoIlePeriod.Value));
                     bRun.Text = "Uruchomiony";
-                    mergeCombobox = cBGodzina.SelectedItem + ":" + cBMinuta.SelectedItem + ":" + cBSekunda.SelectedItem;
+                    mergeCombobox = cBHour.SelectedItem + ":" + cBMinute.SelectedItem + ":" + cBSecond.SelectedItem;
 
                     Microsoft.Win32.RegistryKey keyx;
-                    keyx = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - Monitoring plikow");
-                    keyx.SetValue("Hour", cBGodzina.SelectedItem);
-                    keyx.SetValue("Minute", cBMinuta.SelectedItem);
-                    keyx.SetValue("Second", cBSekunda.SelectedItem);
-                    keyx.SetValue("NumericMinute", nUDCoIleMinut.Value);
+                    keyx = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - SeachrExtension");
+                    keyx.SetValue("Hour", cBHour.SelectedItem);
+                    keyx.SetValue("Minute", cBMinute.SelectedItem);
+                    keyx.SetValue("Second", cBSecond.SelectedItem);
+                    keyx.SetValue("NumericMinute", nUDCoIlePeriod.Value);
                     keyx.Close();
                     toolStripStatusLabel1.Text = "Status: Uruchomiony";
                 }
             }
-            else if (cbWybranaOpcjaSprawdzania.SelectedIndex == 1)
+            else if (cbChoicePeriod.SelectedIndex == 1)
             {
-                 TimerActiveButton = true;
-                 DateMonit = DateTime.Now.AddSeconds(Convert.ToDouble(nUDCoIleMinut.Value));
-                 bRun.Text = "Uruchomiony";
+                TimerActiveButton = true;
+                DateMonit = DateTime.Now.AddSeconds(Convert.ToDouble(nUDCoIlePeriod.Value));
+                bRun.Text = "Uruchomiony";
 
-                Microsoft.Win32.RegistryKey keyx;
-                keyx = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - Monitoring plikow");
-                keyx.SetValue("Hour", cBGodzina.SelectedItem);
-                keyx.SetValue("Minute", cBMinuta.SelectedItem);
-                keyx.SetValue("Second", cBSekunda.SelectedItem);
-                keyx.SetValue("NumericMinute", nUDCoIleMinut.Value);
-                keyx.Close();
+                //Microsoft.Win32.RegistryKey keyx;
+                //keyx = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - SeachrExtension");
+                //keyx.SetValue("Hour", cBHour.SelectedItem);
+                //keyx.SetValue("Minute", cBMinute.SelectedItem);
+                //keyx.SetValue("Second", cBSecond.SelectedItem);
+                //keyx.SetValue("NumericMinute", nUDCoIlePeriod.Value);
+                //keyx.Close();
                 toolStripStatusLabel1.Text = "Status: Uruchomiony";
-
             }
+
             //try
             //{
             //    // Only get files that begin with the letter "c."
@@ -450,7 +445,7 @@ namespace SearchExtension
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            lczas.Text = DateTime.Now.ToLongTimeString();
+            lTime.Text = DateTime.Now.ToLongTimeString();
 
             if (TimerActiveButton == true)
             {
@@ -464,7 +459,7 @@ namespace SearchExtension
                     foreach (string item2 in dirs)
                     {
 
-                        FileInfo f = new FileInfo(item2);
+                        FileInfo fileInfo = new FileInfo(item2);
 
 
                         DirectoryInfo dir = new DirectoryInfo(item2);
@@ -472,7 +467,7 @@ namespace SearchExtension
                         var x = dir.EnumerateFiles("*.*", SearchOption.AllDirectories).Sum(file => file.Length);
 
 
-                        listBox1.Items.Add(f.Name + " waga: " + x / 1024 / 1024 + "MB");
+                        listBox1.Items.Add(fileInfo.Name + " waga: " + x / 1024 / 1024 + "MB");
 
                         RefleshDataGrid();
 
@@ -483,7 +478,7 @@ namespace SearchExtension
 
                 var startData = DateTime.Now.ToString("hh.mm.ss.ffffff");
 
-                if (cbWybranaOpcjaSprawdzania.SelectedIndex == 0)
+                if (cbChoicePeriod.SelectedIndex == 0)
                 {
 
                     DateTime changeCombine = DateTime.Parse((DateMonit.ToString("yyyy/MM/dd") + " " + mergeCombobox));
@@ -520,7 +515,7 @@ namespace SearchExtension
                         {
 
                             Microsoft.Win32.RegistryKey key;
-                            key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - Monitoring plikow");
+                            key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - SeachrExtension");
                             try
                             {
 
@@ -569,12 +564,12 @@ namespace SearchExtension
 
                     }
                 }
-                else if (cbWybranaOpcjaSprawdzania.SelectedIndex == 1)
+                else if (cbChoicePeriod.SelectedIndex == 1)
                 {
 
                     if (DateMonit <= DateTime.Now)
                     {
-                        DateMonit = DateTime.Now.AddMinutes(Convert.ToDouble(nUDCoIleMinut.Value));
+                        DateMonit = DateTime.Now.AddMinutes(Convert.ToDouble(nUDCoIlePeriod.Value));
 
 
                         StringExtension = string.Empty;
@@ -602,7 +597,7 @@ namespace SearchExtension
                         {
 
                             Microsoft.Win32.RegistryKey key;
-                            key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - Monitoring plikow");
+                            key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - SeachrExtension");
                             try
                             {
 

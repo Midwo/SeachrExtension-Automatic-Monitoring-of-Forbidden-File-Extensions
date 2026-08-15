@@ -18,7 +18,7 @@ namespace SearchExtension
             InitializeComponent();
 
             Microsoft.Win32.RegistryKey key;
-            key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - Monitoring plikow");
+            key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - SeachrExtension");
             try
             {
                 if (key.GetValue("Name").ToString() != string.Empty || key.GetValue("Password").ToString() != string.Empty || key.GetValue("Signature").ToString() != string.Empty || key.GetValue("SMTP").ToString() != string.Empty || key.GetValue("Port").ToString() != string.Empty)
@@ -67,7 +67,7 @@ namespace SearchExtension
                 if (tbNameAccount.Text.Trim().Length > 0 && mtbPassword.Text.Trim().Length > 0 && tbSignature.Text.Trim().Length > 0 && tbSmtp.Text.Trim().Length > 0 && tbPort.Text.Trim().Length > 0)
                 {
                     Microsoft.Win32.RegistryKey keyx;
-                    keyx = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - Monitoring plikow");
+                    keyx = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - SeachrExtension");
                     keyx.SetValue("Name", tbNameAccount.Text.Trim());
                     keyx.SetValue("Password", mtbPassword.Text.Trim());
                     keyx.SetValue("Signature", tbSignature.Text.Trim());
@@ -78,7 +78,7 @@ namespace SearchExtension
                     try
                     {
                         Microsoft.Win32.RegistryKey keyy;
-                        keyy = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - Monitoring plikow");
+                        keyy = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - SeachrExtension");
 
                         int port = Int32.Parse(keyy.GetValue("Port").ToString());
                         SmtpClient mailServer = new SmtpClient(keyy.GetValue("SMTP").ToString(), port);
@@ -130,7 +130,7 @@ namespace SearchExtension
                 if (tbNameAccount.Text.Trim().Length > 0 && mtbPassword.Text.Trim().Length > 0 && tbSignature.Text.Trim().Length > 0 && tbSmtp.Text.Trim().Length > 0 && tbPort.Text.Trim().Length > 0)
                 {
                     Microsoft.Win32.RegistryKey key;
-                    key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - Monitoring plikow");
+                    key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("MD - SeachrExtension");
                     key.SetValue("Name", tbNameAccount.Text.Trim());
                     key.SetValue("Password", mtbPassword.Text.Trim());
                     key.SetValue("Signature", tbSignature.Text.Trim());

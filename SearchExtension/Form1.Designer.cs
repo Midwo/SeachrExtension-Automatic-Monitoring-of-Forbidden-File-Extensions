@@ -31,63 +31,63 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lczas = new System.Windows.Forms.Label();
-            this.cbWybranaOpcjaSprawdzania = new System.Windows.Forms.ComboBox();
-            this.lMinuty = new System.Windows.Forms.Label();
-            this.lWykonujCo = new System.Windows.Forms.Label();
+            this.lTime = new System.Windows.Forms.Label();
+            this.cbChoicePeriod = new System.Windows.Forms.ComboBox();
+            this.lMinutes = new System.Windows.Forms.Label();
+            this.lPeriod = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.nUDCoIleMinut = new System.Windows.Forms.NumericUpDown();
+            this.nUDCoIlePeriod = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.tBExtId = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.bEditExt = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.tBExtId = new System.Windows.Forms.TextBox();
             this.tBEditExt = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bAddExt = new System.Windows.Forms.Button();
+            this.tBAddExt = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.bDeleteRecords = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tBAddExt = new System.Windows.Forms.TextBox();
-            this.cBGodzina = new System.Windows.Forms.ComboBox();
-            this.cBMinuta = new System.Windows.Forms.ComboBox();
+            this.cBHour = new System.Windows.Forms.ComboBox();
+            this.cBMinute = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.tBPath = new System.Windows.Forms.TextBox();
-            this.cBSekunda = new System.Windows.Forms.ComboBox();
+            this.cBSecond = new System.Windows.Forms.ComboBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.konfiguracjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.konfiguracjaKontaEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ListaEmailOdbiorcówToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.informacjaOAutorzeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grafikaUżytaWProjekcieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configurationAccountEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listOfMsgRecipientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.authorInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.graphicInProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.bLoadPath = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.bRun = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDCoIleMinut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDCoIlePeriod)).BeginInit();
             this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.lczas);
+            this.groupBox4.Controls.Add(this.lTime);
             this.groupBox4.Location = new System.Drawing.Point(7, 46);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(120, 77);
@@ -95,50 +95,50 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Aktualny czas:";
             // 
-            // lczas
+            // lTime
             // 
-            this.lczas.AutoSize = true;
-            this.lczas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.lczas.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lczas.Location = new System.Drawing.Point(8, 28);
-            this.lczas.Name = "lczas";
-            this.lczas.Size = new System.Drawing.Size(79, 29);
-            this.lczas.TabIndex = 8;
-            this.lczas.Text = "label2";
+            this.lTime.AutoSize = true;
+            this.lTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.lTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lTime.Location = new System.Drawing.Point(8, 28);
+            this.lTime.Name = "lTime";
+            this.lTime.Size = new System.Drawing.Size(79, 29);
+            this.lTime.TabIndex = 8;
+            this.lTime.Text = "label2";
             // 
-            // cbWybranaOpcjaSprawdzania
+            // cbChoicePeriod
             // 
-            this.cbWybranaOpcjaSprawdzania.FormattingEnabled = true;
-            this.cbWybranaOpcjaSprawdzania.Items.AddRange(new object[] {
+            this.cbChoicePeriod.FormattingEnabled = true;
+            this.cbChoicePeriod.Items.AddRange(new object[] {
             "O określonej godzinie",
             "Co określony czas"});
-            this.cbWybranaOpcjaSprawdzania.Location = new System.Drawing.Point(6, 19);
-            this.cbWybranaOpcjaSprawdzania.Name = "cbWybranaOpcjaSprawdzania";
-            this.cbWybranaOpcjaSprawdzania.Size = new System.Drawing.Size(363, 21);
-            this.cbWybranaOpcjaSprawdzania.TabIndex = 22;
-            this.cbWybranaOpcjaSprawdzania.SelectedIndexChanged += new System.EventHandler(this.CbWybranaOpcjaSprawdzania_SelectedIndexChanged);
+            this.cbChoicePeriod.Location = new System.Drawing.Point(6, 19);
+            this.cbChoicePeriod.Name = "cbChoicePeriod";
+            this.cbChoicePeriod.Size = new System.Drawing.Size(363, 21);
+            this.cbChoicePeriod.TabIndex = 22;
+            this.cbChoicePeriod.SelectedIndexChanged += new System.EventHandler(this.CbChoicePeriod_SelectedIndexChanged);
             // 
-            // lMinuty
+            // lMinutes
             // 
-            this.lMinuty.AutoSize = true;
-            this.lMinuty.Enabled = false;
-            this.lMinuty.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lMinuty.Location = new System.Drawing.Point(301, 106);
-            this.lMinuty.Name = "lMinuty";
-            this.lMinuty.Size = new System.Drawing.Size(33, 13);
-            this.lMinuty.TabIndex = 21;
-            this.lMinuty.Text = "Minut";
+            this.lMinutes.AutoSize = true;
+            this.lMinutes.Enabled = false;
+            this.lMinutes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lMinutes.Location = new System.Drawing.Point(301, 106);
+            this.lMinutes.Name = "lMinutes";
+            this.lMinutes.Size = new System.Drawing.Size(33, 13);
+            this.lMinutes.TabIndex = 21;
+            this.lMinutes.Text = "Minut";
             // 
-            // lWykonujCo
+            // lPeriod
             // 
-            this.lWykonujCo.AutoSize = true;
-            this.lWykonujCo.Enabled = false;
-            this.lWykonujCo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lWykonujCo.Location = new System.Drawing.Point(145, 104);
-            this.lWykonujCo.Name = "lWykonujCo";
-            this.lWykonujCo.Size = new System.Drawing.Size(67, 13);
-            this.lWykonujCo.TabIndex = 20;
-            this.lWykonujCo.Text = "Wykonuj co:";
+            this.lPeriod.AutoSize = true;
+            this.lPeriod.Enabled = false;
+            this.lPeriod.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lPeriod.Location = new System.Drawing.Point(145, 104);
+            this.lPeriod.Name = "lPeriod";
+            this.lPeriod.Size = new System.Drawing.Size(67, 13);
+            this.lPeriod.TabIndex = 20;
+            this.lPeriod.Text = "Wykonuj co:";
             // 
             // label6
             // 
@@ -162,24 +162,24 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Minuta:";
             // 
-            // nUDCoIleMinut
+            // nUDCoIlePeriod
             // 
-            this.nUDCoIleMinut.Enabled = false;
-            this.nUDCoIleMinut.Location = new System.Drawing.Point(229, 102);
-            this.nUDCoIleMinut.Maximum = new decimal(new int[] {
+            this.nUDCoIlePeriod.Enabled = false;
+            this.nUDCoIlePeriod.Location = new System.Drawing.Point(229, 102);
+            this.nUDCoIlePeriod.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.nUDCoIleMinut.Minimum = new decimal(new int[] {
+            this.nUDCoIlePeriod.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.nUDCoIleMinut.Name = "nUDCoIleMinut";
-            this.nUDCoIleMinut.Size = new System.Drawing.Size(62, 20);
-            this.nUDCoIleMinut.TabIndex = 12;
-            this.nUDCoIleMinut.Value = new decimal(new int[] {
+            this.nUDCoIlePeriod.Name = "nUDCoIlePeriod";
+            this.nUDCoIlePeriod.Size = new System.Drawing.Size(62, 20);
+            this.nUDCoIlePeriod.TabIndex = 12;
+            this.nUDCoIlePeriod.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -209,23 +209,19 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Menu szukania rozszerzeń plików";
             // 
-            // tBExtId
+            // groupBox6
             // 
-            this.tBExtId.Enabled = false;
-            this.tBExtId.Location = new System.Drawing.Point(34, 15);
-            this.tBExtId.Name = "tBExtId";
-            this.tBExtId.Size = new System.Drawing.Size(160, 20);
-            this.tBExtId.TabIndex = 38;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(9, 18);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(19, 13);
-            this.label9.TabIndex = 39;
-            this.label9.Text = "Id:";
+            this.groupBox6.Controls.Add(this.bEditExt);
+            this.groupBox6.Controls.Add(this.tBExtId);
+            this.groupBox6.Controls.Add(this.tBEditExt);
+            this.groupBox6.Controls.Add(this.label9);
+            this.groupBox6.Controls.Add(this.label3);
+            this.groupBox6.Location = new System.Drawing.Point(221, 104);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(200, 107);
+            this.groupBox6.TabIndex = 50;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Edycja rozszerzenia:";
             // 
             // bEditExt
             // 
@@ -240,6 +236,33 @@
             this.bEditExt.UseVisualStyleBackColor = false;
             this.bEditExt.Click += new System.EventHandler(this.BEditExt_Click);
             // 
+            // tBExtId
+            // 
+            this.tBExtId.Enabled = false;
+            this.tBExtId.Location = new System.Drawing.Point(34, 15);
+            this.tBExtId.Name = "tBExtId";
+            this.tBExtId.Size = new System.Drawing.Size(160, 20);
+            this.tBExtId.TabIndex = 38;
+            // 
+            // tBEditExt
+            // 
+            this.tBEditExt.Enabled = false;
+            this.tBEditExt.Location = new System.Drawing.Point(34, 41);
+            this.tBEditExt.Name = "tBEditExt";
+            this.tBEditExt.Size = new System.Drawing.Size(160, 20);
+            this.tBEditExt.TabIndex = 35;
+            this.tBEditExt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TBEditExt_KeyDown);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label9.Location = new System.Drawing.Point(9, 18);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(19, 13);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "Id:";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -250,14 +273,17 @@
             this.label3.TabIndex = 36;
             this.label3.Text = "Ext:";
             // 
-            // tBEditExt
+            // groupBox2
             // 
-            this.tBEditExt.Enabled = false;
-            this.tBEditExt.Location = new System.Drawing.Point(34, 41);
-            this.tBEditExt.Name = "tBEditExt";
-            this.tBEditExt.Size = new System.Drawing.Size(160, 20);
-            this.tBEditExt.TabIndex = 35;
-            this.tBEditExt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TBEditExt_KeyDown);
+            this.groupBox2.Controls.Add(this.bAddExt);
+            this.groupBox2.Controls.Add(this.tBAddExt);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Location = new System.Drawing.Point(220, 14);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 84);
+            this.groupBox2.TabIndex = 50;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Dodaj rozszerzenie:";
             // 
             // bAddExt
             // 
@@ -271,6 +297,26 @@
             this.bAddExt.Text = "Dodaj rozszerzenie";
             this.bAddExt.UseVisualStyleBackColor = false;
             this.bAddExt.Click += new System.EventHandler(this.BAddExt_Click);
+            // 
+            // tBAddExt
+            // 
+            this.tBAddExt.Location = new System.Drawing.Point(35, 17);
+            this.tBAddExt.Name = "tBAddExt";
+            this.tBAddExt.Size = new System.Drawing.Size(159, 20);
+            this.tBAddExt.TabIndex = 29;
+            this.tBAddExt.Text = "np: mp4";
+            this.tBAddExt.Click += new System.EventHandler(this.TBAddExt_Click);
+            this.tBAddExt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TBAddExt_KeyDown);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label11.Location = new System.Drawing.Point(4, 20);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(25, 13);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Ext:";
             // 
             // bDeleteRecords
             // 
@@ -294,34 +340,14 @@
             this.dataGridView1.TabIndex = 27;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
-            // label11
+            // cBHour
             // 
-            this.label11.AutoSize = true;
-            this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(4, 20);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(25, 13);
-            this.label11.TabIndex = 33;
-            this.label11.Text = "Ext:";
-            // 
-            // tBAddExt
-            // 
-            this.tBAddExt.Location = new System.Drawing.Point(35, 17);
-            this.tBAddExt.Name = "tBAddExt";
-            this.tBAddExt.Size = new System.Drawing.Size(159, 20);
-            this.tBAddExt.TabIndex = 29;
-            this.tBAddExt.Text = "np: mp4";
-            this.tBAddExt.Click += new System.EventHandler(this.TBAddExt_Click);
-            this.tBAddExt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TBAddExt_KeyDown);
-            // 
-            // cBGodzina
-            // 
-            this.cBGodzina.DisplayMember = "0";
-            this.cBGodzina.DropDownHeight = 290;
-            this.cBGodzina.Enabled = false;
-            this.cBGodzina.FormattingEnabled = true;
-            this.cBGodzina.IntegralHeight = false;
-            this.cBGodzina.Items.AddRange(new object[] {
+            this.cBHour.DisplayMember = "0";
+            this.cBHour.DropDownHeight = 290;
+            this.cBHour.Enabled = false;
+            this.cBHour.FormattingEnabled = true;
+            this.cBHour.IntegralHeight = false;
+            this.cBHour.Items.AddRange(new object[] {
             "00",
             "01",
             "02",
@@ -346,18 +372,18 @@
             "21",
             "22",
             "23"});
-            this.cBGodzina.Location = new System.Drawing.Point(148, 66);
-            this.cBGodzina.Name = "cBGodzina";
-            this.cBGodzina.Size = new System.Drawing.Size(65, 21);
-            this.cBGodzina.TabIndex = 14;
+            this.cBHour.Location = new System.Drawing.Point(148, 66);
+            this.cBHour.Name = "cBHour";
+            this.cBHour.Size = new System.Drawing.Size(65, 21);
+            this.cBHour.TabIndex = 14;
             // 
-            // cBMinuta
+            // cBMinute
             // 
-            this.cBMinuta.DropDownHeight = 290;
-            this.cBMinuta.Enabled = false;
-            this.cBMinuta.FormattingEnabled = true;
-            this.cBMinuta.IntegralHeight = false;
-            this.cBMinuta.Items.AddRange(new object[] {
+            this.cBMinute.DropDownHeight = 290;
+            this.cBMinute.Enabled = false;
+            this.cBMinute.FormattingEnabled = true;
+            this.cBMinute.IntegralHeight = false;
+            this.cBMinute.Items.AddRange(new object[] {
             "00",
             "01",
             "02",
@@ -418,10 +444,10 @@
             "57",
             "58",
             "59"});
-            this.cBMinuta.Location = new System.Drawing.Point(226, 66);
-            this.cBMinuta.Name = "cBMinuta";
-            this.cBMinuta.Size = new System.Drawing.Size(65, 21);
-            this.cBMinuta.TabIndex = 15;
+            this.cBMinute.Location = new System.Drawing.Point(226, 66);
+            this.cBMinute.Name = "cBMinute";
+            this.cBMinute.Size = new System.Drawing.Size(65, 21);
+            this.cBMinute.TabIndex = 15;
             // 
             // label2
             // 
@@ -459,13 +485,13 @@
             this.tBPath.Size = new System.Drawing.Size(313, 20);
             this.tBPath.TabIndex = 2;
             // 
-            // cBSekunda
+            // cBSecond
             // 
-            this.cBSekunda.DropDownHeight = 290;
-            this.cBSekunda.Enabled = false;
-            this.cBSekunda.FormattingEnabled = true;
-            this.cBSekunda.IntegralHeight = false;
-            this.cBSekunda.Items.AddRange(new object[] {
+            this.cBSecond.DropDownHeight = 290;
+            this.cBSecond.Enabled = false;
+            this.cBSecond.FormattingEnabled = true;
+            this.cBSecond.IntegralHeight = false;
+            this.cBSecond.Items.AddRange(new object[] {
             "00",
             "01",
             "02",
@@ -526,10 +552,10 @@
             "57",
             "58",
             "59"});
-            this.cBSekunda.Location = new System.Drawing.Point(304, 66);
-            this.cBSekunda.Name = "cBSekunda";
-            this.cBSekunda.Size = new System.Drawing.Size(65, 21);
-            this.cBSekunda.TabIndex = 16;
+            this.cBSecond.Location = new System.Drawing.Point(304, 66);
+            this.cBSecond.Name = "cBSecond";
+            this.cBSecond.Size = new System.Drawing.Size(65, 21);
+            this.cBSecond.TabIndex = 16;
             // 
             // timer1
             // 
@@ -538,16 +564,16 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Controls.Add(this.cbWybranaOpcjaSprawdzania);
-            this.groupBox3.Controls.Add(this.lMinuty);
-            this.groupBox3.Controls.Add(this.lWykonujCo);
+            this.groupBox3.Controls.Add(this.cbChoicePeriod);
+            this.groupBox3.Controls.Add(this.lMinutes);
+            this.groupBox3.Controls.Add(this.lPeriod);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.nUDCoIleMinut);
+            this.groupBox3.Controls.Add(this.nUDCoIlePeriod);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.cBSekunda);
-            this.groupBox3.Controls.Add(this.cBGodzina);
-            this.groupBox3.Controls.Add(this.cBMinuta);
+            this.groupBox3.Controls.Add(this.cBSecond);
+            this.groupBox3.Controls.Add(this.cBHour);
+            this.groupBox3.Controls.Add(this.cBMinute);
             this.groupBox3.Location = new System.Drawing.Point(4, 238);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(380, 132);
@@ -559,8 +585,8 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Silver;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.konfiguracjaToolStripMenuItem,
-            this.pomocToolStripMenuItem});
+            this.configurationToolStripMenuItem,
+            this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -569,61 +595,61 @@
             this.menuStrip1.TabIndex = 44;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // konfiguracjaToolStripMenuItem
+            // configurationToolStripMenuItem
             // 
-            this.konfiguracjaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.konfiguracjaKontaEmailToolStripMenuItem,
-            this.ListaEmailOdbiorcówToolStripMenuItem});
-            this.konfiguracjaToolStripMenuItem.Image = global::SearchExtension.Properties.Resources.icons8_administrative_tools_35;
-            this.konfiguracjaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.konfiguracjaToolStripMenuItem.Name = "konfiguracjaToolStripMenuItem";
-            this.konfiguracjaToolStripMenuItem.Size = new System.Drawing.Size(85, 39);
-            this.konfiguracjaToolStripMenuItem.Text = "Menu";
+            this.configurationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.configurationAccountEmailToolStripMenuItem,
+            this.listOfMsgRecipientsToolStripMenuItem});
+            this.configurationToolStripMenuItem.Image = global::SearchExtension.Properties.Resources.icons8_administrative_tools_35;
+            this.configurationToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(85, 39);
+            this.configurationToolStripMenuItem.Text = "Menu";
             // 
-            // konfiguracjaKontaEmailToolStripMenuItem
+            // configurationAccountEmailToolStripMenuItem
             // 
-            this.konfiguracjaKontaEmailToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.konfiguracjaKontaEmailToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.konfiguracjaKontaEmailToolStripMenuItem.Name = "konfiguracjaKontaEmailToolStripMenuItem";
-            this.konfiguracjaKontaEmailToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
-            this.konfiguracjaKontaEmailToolStripMenuItem.Text = "Konfiguracja konta E-mail - nadawca";
-            this.konfiguracjaKontaEmailToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.konfiguracjaKontaEmailToolStripMenuItem.Click += new System.EventHandler(this.KonfiguracjaKontaEmailToolStripMenuItem_Click);
+            this.configurationAccountEmailToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.configurationAccountEmailToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.configurationAccountEmailToolStripMenuItem.Name = "configurationAccountEmailToolStripMenuItem";
+            this.configurationAccountEmailToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
+            this.configurationAccountEmailToolStripMenuItem.Text = "Konfiguracja konta E-mail - nadawca";
+            this.configurationAccountEmailToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.configurationAccountEmailToolStripMenuItem.Click += new System.EventHandler(this.ConfigurationAccountEmailToolStripMenuItem_Click);
             // 
-            // ListaEmailOdbiorcówToolStripMenuItem
+            // listOfMsgRecipientsToolStripMenuItem
             // 
-            this.ListaEmailOdbiorcówToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.ListaEmailOdbiorcówToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ListaEmailOdbiorcówToolStripMenuItem.Name = "ListaEmailOdbiorcówToolStripMenuItem";
-            this.ListaEmailOdbiorcówToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
-            this.ListaEmailOdbiorcówToolStripMenuItem.Text = "Lista E-mail - odbiorcy";
-            this.ListaEmailOdbiorcówToolStripMenuItem.Click += new System.EventHandler(this.ListaEmailOdbiorcówToolStripMenuItem_Click);
+            this.listOfMsgRecipientsToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.listOfMsgRecipientsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.listOfMsgRecipientsToolStripMenuItem.Name = "listOfMsgRecipientsToolStripMenuItem";
+            this.listOfMsgRecipientsToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
+            this.listOfMsgRecipientsToolStripMenuItem.Text = "Lista E-mail - odbiorcy";
+            this.listOfMsgRecipientsToolStripMenuItem.Click += new System.EventHandler(this.ListOfMsgRecipientsToolStripMenuItem_Click);
             // 
-            // pomocToolStripMenuItem
+            // helpToolStripMenuItem
             // 
-            this.pomocToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.informacjaOAutorzeToolStripMenuItem,
-            this.grafikaUżytaWProjekcieToolStripMenuItem});
-            this.pomocToolStripMenuItem.Image = global::SearchExtension.Properties.Resources.icons8_information_35;
-            this.pomocToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.pomocToolStripMenuItem.Name = "pomocToolStripMenuItem";
-            this.pomocToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.pomocToolStripMenuItem.Size = new System.Drawing.Size(111, 39);
-            this.pomocToolStripMenuItem.Text = "Informacje";
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.authorInfoToolStripMenuItem,
+            this.graphicInProjectToolStripMenuItem});
+            this.helpToolStripMenuItem.Image = global::SearchExtension.Properties.Resources.icons8_information_35;
+            this.helpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(111, 39);
+            this.helpToolStripMenuItem.Text = "Informacje";
             // 
-            // informacjaOAutorzeToolStripMenuItem
+            // authorInfoToolStripMenuItem
             // 
-            this.informacjaOAutorzeToolStripMenuItem.Name = "informacjaOAutorzeToolStripMenuItem";
-            this.informacjaOAutorzeToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
-            this.informacjaOAutorzeToolStripMenuItem.Text = "Informacja o autorze";
-            this.informacjaOAutorzeToolStripMenuItem.Click += new System.EventHandler(this.InformacjaOAutorzeToolStripMenuItem_Click);
+            this.authorInfoToolStripMenuItem.Name = "authorInfoToolStripMenuItem";
+            this.authorInfoToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.authorInfoToolStripMenuItem.Text = "Informacja o autorze";
+            this.authorInfoToolStripMenuItem.Click += new System.EventHandler(this.AuthorInfoToolStripMenuItem_Click);
             // 
-            // grafikaUżytaWProjekcieToolStripMenuItem
+            // graphicInProjectToolStripMenuItem
             // 
-            this.grafikaUżytaWProjekcieToolStripMenuItem.Name = "grafikaUżytaWProjekcieToolStripMenuItem";
-            this.grafikaUżytaWProjekcieToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
-            this.grafikaUżytaWProjekcieToolStripMenuItem.Text = "Grafika użyta w projekcie";
-            this.grafikaUżytaWProjekcieToolStripMenuItem.Click += new System.EventHandler(this.GrafikaUżytaWProjekcieToolStripMenuItem_Click);
+            this.graphicInProjectToolStripMenuItem.Name = "graphicInProjectToolStripMenuItem";
+            this.graphicInProjectToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
+            this.graphicInProjectToolStripMenuItem.Text = "Grafika użyta w projekcie";
+            this.graphicInProjectToolStripMenuItem.Click += new System.EventHandler(this.GraphicInProjectToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
@@ -684,32 +710,6 @@
             this.bRun.UseVisualStyleBackColor = false;
             this.bRun.Click += new System.EventHandler(this.RRun_Click);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.bAddExt);
-            this.groupBox2.Controls.Add(this.tBAddExt);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Location = new System.Drawing.Point(220, 14);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 84);
-            this.groupBox2.TabIndex = 50;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Dodaj rozszerzenie:";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.bEditExt);
-            this.groupBox6.Controls.Add(this.tBExtId);
-            this.groupBox6.Controls.Add(this.tBEditExt);
-            this.groupBox6.Controls.Add(this.label9);
-            this.groupBox6.Controls.Add(this.label3);
-            this.groupBox6.Location = new System.Drawing.Point(221, 104);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(200, 107);
-            this.groupBox6.TabIndex = 50;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Edycja rozszerzenia:";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -729,8 +729,12 @@
             this.Text = "MD - Automatyczny monitoring danych - Rozszerzeń";
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDCoIleMinut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDCoIlePeriod)).EndInit();
             this.groupBox5.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -740,10 +744,6 @@
             this.groupBox1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -752,13 +752,13 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label lczas;
-        private System.Windows.Forms.ComboBox cbWybranaOpcjaSprawdzania;
-        private System.Windows.Forms.Label lMinuty;
-        private System.Windows.Forms.Label lWykonujCo;
+        private System.Windows.Forms.Label lTime;
+        private System.Windows.Forms.ComboBox cbChoicePeriod;
+        private System.Windows.Forms.Label lMinutes;
+        private System.Windows.Forms.Label lPeriod;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown nUDCoIleMinut;
+        private System.Windows.Forms.NumericUpDown nUDCoIlePeriod;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox tBExtId;
@@ -771,29 +771,29 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tBAddExt;
-        private System.Windows.Forms.ComboBox cBGodzina;
-        private System.Windows.Forms.ComboBox cBMinuta;
+        private System.Windows.Forms.ComboBox cBHour;
+        private System.Windows.Forms.ComboBox cBMinute;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox tBPath;
         private System.Windows.Forms.Button bLoadPath;
-        private System.Windows.Forms.ComboBox cBSekunda;
+        private System.Windows.Forms.ComboBox cBSecond;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem konfiguracjaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem konfiguracjaKontaEmailToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ListaEmailOdbiorcówToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pomocToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem informacjaOAutorzeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem grafikaUżytaWProjekcieToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configurationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configurationAccountEmailToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listOfMsgRecipientsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem authorInfoToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Button bRun;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ToolStripMenuItem graphicInProjectToolStripMenuItem;
     }
 }
 
