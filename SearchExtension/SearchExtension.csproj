@@ -137,6 +137,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <Content Include="SearchExtension1.png" />
+    <Content Include="SearchExtension2.png" />
+    <Content Include="SearchExtension3.png" />
+    <Content Include="SearchExtension4.png" />
+    <Content Include="SearchExtension5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
